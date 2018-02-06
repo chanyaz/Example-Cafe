@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Example Cafe</string>
+    <string name="title">Example Cafe</string>
+    <string name="subtitle">A Cafe</string>
+    <string name="log_in">Log in</string>
+    <string name="not_implemented">Not implemented</string>
+    <string name="about_us_title">About Us</string>
+    <string name="menu_title">Menu</string>
+    <string name="location_title">Location</string>
+    <string name="error_network">Network error occurred</string>
+    <string name="retry">Retry</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper venenatis nisi, sed fringilla odio mattis in. Etiam faucibus tortor at nunc lacinia, sit amet ullamcorper metus iaculis. Proin fringilla arcu urna, ac iaculis neque lacinia eget. Mauris suscipit, nunc ac pharetra luctus, nisl orci dapibus nulla, eu vestibulum turpis felis nec enim. Duis nec pharetra diam, a luctus dui. Vestibulum faucibus blandit mi, eget lacinia odio sagittis sed. Ut vitae arcu accumsan sapien feugiat ultricies ultricies ut metus. Aliquam lacinia porta orci, at cursus mauris volutpat at. Mauris nec massa non magna euismod porta. Nam at tortor ipsum. Nulla vitae tortor tempus, dapibus justo sed, mattis ipsum. Donec ac varius urna. Integer maximus orci et aliquam lacinia. Praesent vel commodo quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</string>
+</resources>

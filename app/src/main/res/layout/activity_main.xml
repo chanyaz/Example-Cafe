@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.makaroffandrey.examplecafe.MainActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background"
+            app:layout_behavior="com.makaroffandrey.examplecafe.ui.BottomSheetDependentBehavior"
+            android:layout_marginBottom="@dimen/background_margin"
+            app:sheet_marginTop="@dimen/background_margin" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:textColor="@android:color/white"
+            android:textAllCaps="true"
+            android:textSize="28sp"
+            android:text="@string/title"
+            app:layout_behavior="com.makaroffandrey.examplecafe.ui.BottomSheetDependentBehavior"
+            app:sheet_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:textColor="@android:color/white"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:text="@string/subtitle"
+            android:layout_marginTop="4dp"
+            app:layout_anchor="@id/titleText"
+            app:layout_anchorGravity="bottom|center_horizontal"
+            app:sheet_anchorGravity="left|bottom"
+            app:sheet_gravity="right|bottom"
+            app:layout_behavior="com.makaroffandrey.examplecafe.ui.BottomSheetDependentBehavior"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_margin="16dp"
+            app:srcCompat="@drawable/ic_phone_white_24dp"
+            app:layout_anchor="@id/fabSpace"
+            app:layout_anchorGravity="right" />
+
+        <android.support.v4.widget.Space
+            android:id="@+id/fabSpace"
+            android:layout_width="0px"
+            android:layout_height="16dp"
+            android:layout_gravity="top"
+            app:layout_anchor="@id/bottomSheet"
+            app:layout_anchorGravity="right" />
+
+        <HorizontalScrollView
+            android:id="@+id/bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/peek_height"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="-10dp"
+            app:layout_behavior="com.makaroffandrey.examplecafe.ui.BottomSheetDependentBehavior"
+            app:sheet_height="@dimen/sheet_height"
+            app:sheet_marginBottom="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <include layout="@layout/inside_card_layout" android:id="@+id/aboutUsCard"/>
+                <include layout="@layout/inside_card_layout" android:id="@+id/menuCard"/>
+                <include layout="@layout/inside_card_layout" android:id="@+id/locationCard"/>
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sheet_height"
+            app:behavior_hideable="false"
+            app:behavior_peekHeight="@dimen/peek_height"
+            app:layout_behavior="@string/bottom_sheet_behavior" />
+
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_drawer_menu" />
+</android.support.v4.widget.DrawerLayout>
